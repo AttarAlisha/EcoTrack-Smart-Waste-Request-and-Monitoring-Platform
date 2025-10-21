@@ -13,7 +13,7 @@ if($email == false){
   <title>EcoTrack - New Password</title>
 
   <!-- Favicon -->
-  <link rel="icon" href="assets/img/clients/Capture.PNG" type="image/png">
+  <link rel="icon" href="../assets/img/clients/Capture.PNG" type="image/png">
 
   <!-- Google Fonts -->
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap" rel="stylesheet">
@@ -32,12 +32,12 @@ if($email == false){
   <!-- Header -->
   <header id="header">
     <div class="container">
-      <h1 class="logo"><a href="index.html">EcoTrack</a></h1>
+      <h1 class="logo"><a href="../user/index.html">EcoTrack</a></h1>
       <nav id="nav">
         <ul>
           <li><a href="index.html"><i class="fa fa-home"></i> Home</a></li>
-          <li><a href="phpGmailSMTP/trash.php"><i class="fa fa-trash"></i> Complain</a></li>
-          <li><a href="adminlogin/welcome.php"><i class="fa fa-edit"></i> View History</a></li>
+          <li><a href="trash.php"><i class="fa fa-trash"></i> Complain</a></li>
+          <li><a href="welcome.php"><i class="fa fa-edit"></i> View History</a></li>
           <li><a href="signup-user.php"><i class="fa fa-user-plus"></i> Signup</a></li>
         </ul>
       </nav>

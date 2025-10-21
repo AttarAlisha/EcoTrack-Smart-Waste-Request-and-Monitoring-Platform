@@ -37,7 +37,7 @@ if(isset($_POST['update'])){
     $data = mysqli_query($db, $query);
 
     if($data){
-        header("Location: ../adminlogin/welcome.php");
+        header("Location: welcome.php");
         exit();
     } else {
         $error = "Failed to Update!";
@@ -71,12 +71,12 @@ if(isset($_POST['update'])){
   <!-- Header -->
   <header id="header">
     <div class="container">
-      <h1 class="logo"><a href="../index.html">EcoTrack</a></h1>
+      <h1 class="logo"><a href="../user/index.html">EcoTrack</a></h1>
       <nav id="nav">
         <ul>
-          <li><a href="../index.html"><i class="fa fa-home"></i> Home</a></li>
+          <li><a href="index.html"><i class="fa fa-home"></i> Home</a></li>
           <li><a href="update.php" class="active"><i class="fa fa-edit"></i> Edit Complaint</a></li>
-          <li><a href="../adminlogin/welcome.php"><i class="fa fa-eye"></i> View History</a></li>
+          <li><a href="welcome.php"><i class="fa fa-eye"></i> View History</a></li>
         </ul>
       </nav>
     </div>

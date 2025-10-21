@@ -1,11 +1,16 @@
+
+
+/* not used !!!!! */
+
+
 @import url('https://fonts.googleapis.com/css?family=Poppins:400,500,600,700&display=swap');
 html,body{
-    background: #6665ee;
+    background: #020202;
     font-family: 'Poppins', sans-serif;
 }
 ::selection{
     color: #fff;
-    background: #6665ee;
+    background: #020202;
 }
 .container{
     position: absolute;

@@ -10,10 +10,10 @@ if($email == false){
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <title>EcoTrack - New Password</title>
+  <title>EcoTrack - Code Verification</title>
 
   <!-- Favicon -->
-  <link rel="icon" href="assets/img/clients/Capture.PNG" type="image/png">
+  <link rel="icon" href="../assets/img/clients/Capture.PNG" type="image/png">
 
   <!-- Google Fonts -->
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap" rel="stylesheet">
@@ -32,24 +32,24 @@ if($email == false){
   <!-- Header -->
   <header id="header">
     <div class="container">
-      <h1 class="logo"><a href="index.html">EcoTrack</a></h1>
+      <h1 class="logo"><a href="../user/index.html">EcoTrack</a></h1>
       <nav id="nav">
         <ul>
           <li><a href="index.html"><i class="fa fa-home"></i> Home</a></li>
-          <li><a href="phpGmailSMTP/trash.php"><i class="fa fa-trash"></i> Complain</a></li>
-          <li><a href="adminlogin/welcome.php"><i class="fa fa-edit"></i> View History</a></li>
+          <li><a href="trash.php"><i class="fa fa-trash"></i> Complain</a></li>
+          <li><a href="welcome.php"><i class="fa fa-edit"></i> View History</a></li>
           <li><a href="signup-user.php"><i class="fa fa-user-plus"></i> Signup</a></li>
         </ul>
       </nav>
     </div>
   </header>
 
-  <!-- New Password Section -->
+  <!-- Code Verification Section -->
   <section id="login-section">
     <div class="login-card">
-      <form action="new-password.php" method="POST" autocomplete="off">
-        <h2>New Password</h2>
-        <p>Create a new password for your account.</p>
+      <form action="user-otp.php" method="POST" autocomplete="off">
+        <h2>Code Verification</h2>
+        <p>Enter the verification code sent to your email.</p>
 
         <?php if(isset($_SESSION['info'])): ?>
           <div class="alert alert-success text-center">
@@ -66,13 +66,11 @@ if($email == false){
         <?php endif; ?>
 
         <div class="form-group mb-3">
-          <input class="form-control" type="password" name="password" placeholder="Create new password" required>
+          <input class="form-control" type="number" name="otp" placeholder="Enter verification code" required>
         </div>
+
         <div class="form-group mb-3">
-          <input class="form-control" type="password" name="cpassword" placeholder="Confirm your password" required>
-        </div>
-        <div class="form-group mb-3">
-          <input class="button" type="submit" name="change-password" value="Change">
+          <input class="button" type="submit" name="check" value="Submit">
         </div>
       </form>
     </div>

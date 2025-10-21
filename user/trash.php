@@ -1,9 +1,9 @@
 <?php 
-require_once '../controllerUserData.php';
+require_once 'controllerUserData.php';
 $email = $_SESSION['email'] ?? false;
 $password = $_SESSION['password'] ?? false;
 if(!$email || !$password){
-  header('Location: ../login-user.php');
+  header('Location: login-user.php');
   exit;
 }
 
@@ -15,10 +15,10 @@ if($run_Sql){
     $code = $fetch_info['code'];
     if($status == "verified"){
         if($code != 0){
-            header('Location: ../reset-code.php');
+            header('Location: reset-code.php');
         }
     } else {
-        header('Location: ../user-otp.php');
+        header('Location: user-otp.php');
     }
 }
 
@@ -53,7 +53,7 @@ if(isset($_POST['submit'])){
             VALUES('$name','$mobile','$email','$chk','$location','$locationdescription','$file','$date','$status')";
     
     if(mysqli_query($con,$sql)){
-        $msg = '<div class="alert alert-success mt-3"><span class="fa fa-check"></span> Complain Registered Successfully! <a href="../adminlogin/welcome.php">View Complain</a></div>';
+        $msg = '<div class="alert alert-success mt-3"><span class="fa fa-check"></span> Complain Registered Successfully! <a href="welcome.php">View Complain</a></div>';
     } else {
         $msg = '<div class="alert alert-danger mt-3"><span class="fa fa-times"></span> Failed to Register!</div>';
     }
@@ -121,13 +121,13 @@ if(isset($_POST['submit'])){
   <!-- Header -->
   <header id="header">
     <div class="container">
-      <h1 class="logo"><a href="../index.html">EcoTrack</a></h1>
+      <h1 class="logo"><a href="../user/index.html">EcoTrack</a></h1>
       <nav id="nav">
         <ul>
-          <li><a href="../index.html"><i class="fa fa-home"></i> Home</a></li>
+          <li><a href="index.html"><i class="fa fa-home"></i> Home</a></li>
           <li><a href="trash.php" class="active"><i class="fa fa-trash"></i> Complain</a></li>
-          <li><a href="../adminlogin/welcome.php"><i class="fa fa-edit"></i> View History</a></li>
-          <li><a href="../signup-user.php"><i class="fa fa-user-plus"></i> Signup</a></li>
+          <li><a href="welcome.php"><i class="fa fa-edit"></i> View History</a></li>
+          <li><a href="signup-user.php"><i class="fa fa-user-plus"></i> Signup</a></li>
         </ul>
       </nav>
     </div>

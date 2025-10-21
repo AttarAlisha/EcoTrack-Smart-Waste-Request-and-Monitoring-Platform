@@ -35,13 +35,14 @@ if (isset($_POST['update'])) {
     <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
     <link rel="stylesheet" type="text/css" href="styleupdate.css">  
 </head>
-<body>
+<body><br>
+<br>
     <form method="post" action="status.php" enctype="multipart/form-data">
         <div class="container contact">
             <div class="row">
                 <div class="col-md-3">
                     <div class="contact-info">
-                        <img src="images.jfif" alt="image" />
+                        <!-- <img src="images.jfif" alt="image" /> -->
                         <h2>Edit Status</h2>
                         <h4>Inform Users their requested complaint is handled!</h4>
                     </div>
